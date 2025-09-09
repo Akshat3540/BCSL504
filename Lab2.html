@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .lab-hours {
+            background-color: #ffcccb;
+            font-weight: bold;
+        }
+        
+        .elective-hours {
+            background-color: #90ee90;
+        }
+        
+        .lunch {
+            background-color: #ffd700;
+        }
+        
+        .odd-row {
+            background-color: #f8f8f8;
+        }
+        
+        .tfoot {
+            background-color: #e6e6e6;
+            font-weight: bold;
+        }
+        
+        .no-classes {
+            background-color: #aa447e;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="7">CLASS TIME TABLE</th>
+            </tr>
+            <tr>
+                <th> TIME </th>
+                <th> MONDAY </th>
+                <th> TUESDAY </th>
+                <th> WEDNESDAY </th>
+                <th> THURSDAY </th>
+                <th> FRIDAY </th>
+                <th> SATURDAY </th>
+            </tr>
+        </thead>
+        <tr>
+            <td>9:00-10:00 </td>
+            <td>Maths </td>
+            <td>English </td>
+            <td>Science </td>
+            <td>History </td>
+            <td>Geography </td>
+            <td rowspan="6" class="no-classes">
+                No classes </td>
+        </tr>
+        <tr class="odd-row">
+            <td>10:00-11:00</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td>Biology</td>
+            <td class="elective-hours">Computer Science</td>
+            <td class="elective-hours">Art</td>
+        </tr>
+        <tr>
+            <td>11:00-12:00</td>
+            <td class="lab-hours" colspan="2">Physics lab</td>
+            <td class="lab-hours" colspan="2">Chemistry lab</td>
+            <td class="lab-hours">Biology lab</td>
+        </tr>
+        <tr class="odd-row">
+            <td>12:00-13:00</td>
+            <td class="lunch" colspan="5">LUNCH BREAK</td>
+        </tr>
+        <tr>
+            <td>13:00-14:00</td>
+            <td>Literature</td>
+            <td>Maths</td>
+            <td>English</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+        </tr>
+        <tr class="odd-row">
+            <td>14:00-15:00</td>
+            <td class="elective-hours">Music</td>
+            <td class="elective-hours">Drama</td>
+            <td class="lab-hours" colspan="3">Computer lab</td>
+        </tr>
+        <tr>
+            <td colspan="2">Key</td>
+            <td class="elective-hours">Elective Hours</td>
+            <td class="lab-hours">Lab Hours</td>
+            <td class="lunch">Lunch</td>
+            <td colspan="2"></td>
+        </tr>
+        <tfoot>
+        </tfoot>
+    </table>
+</body>
+
+</html>
