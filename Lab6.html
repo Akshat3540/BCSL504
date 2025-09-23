@@ -129,7 +129,7 @@
 
 
         function calculate() {
-            if (previousValue !== '' && currentValue !== '') {
+            if (previousValue !== '' && currentValue !== '' && operation !== '') {
                 let result;
                 const prev = parseFloat(previousValue);
                 const current = parseFloat(currentValue);
@@ -155,10 +155,11 @@
                 }
                 display.value = result;
                 previousValue = result.toString();
-                currentValue = '';
+                currentValue = result.toString();
                 operation = '';
             }
         }
+
 
 
         function squareRoot() {
