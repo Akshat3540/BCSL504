@@ -1,0 +1,6 @@
+Step 1: Make sure file is saved as .php
+Step 2: Install XAMPP extension on VS Code, or on your system in C:\ directory (check if there is a folder named xampp in your C directory).
+Step 3: Copy your php file to "C:\xampp\htdocs\", or wherever xampp is installed on your system.
+Step 4: Search for and open XAMPP Control Panel.
+Step 5: Click the start button next to "Apache".
+Step 6: On your browser, go to "localhost/<filename>.php". For example, "localhost/Lab8.php".
