@@ -22,6 +22,6 @@ INSERT INTO students (id, name, gpa) VALUES
 (2, 'Esha', 9.00),
 (3, 'Deepak', 7.75),
 (4, 'Chitra', 9.25),
-(5, 'Rishabh, 8.75);
+(5, 'Rishabh', 8.75);
 
 Table has been created. Visit localhost/<filename>.php. for example, "localhost/Lab8b.php".
