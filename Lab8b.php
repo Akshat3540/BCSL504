@@ -23,7 +23,7 @@
                 $stmt = $pdo->query("SELECT * FROM students");
                 $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                usort($students, fn($a, $b) => $a['gpa'] <=> $b['gpa']);
+                usort($students, fn($i, $j) => $i['gpa'] <=> $j['gpa']);
 
                 echo "<table>";
                 echo "<tr><th>ID</th><th>Name</th><th>GPA</th></tr>";
