@@ -30,10 +30,9 @@
 <body>
     <div class="container">
         <center><h1>Student Records</h1></center>
-        <?php $host = 'localhost'; $dbname = 'student_records'; $username = 'root';
-
+        <?php 
         try {
-            $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username);
+            $pdo = new PDO("mysql:host=localhost;dbname=student_records", 'root', '');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $stmt = $pdo->query("SELECT * FROM students");
