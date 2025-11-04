@@ -7,34 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Record Sorter</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
         .container {
             max-width: 800px;
             margin: auto;
-            background: white;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
+            box-shadow: 0 0 10px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            text-align: center;
         }
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
-            text-align: left;
         }
         th {
             background-color: #f2f2f2;
@@ -43,15 +29,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Student Records</h1>
-        <?php
-        $host = 'localhost';
-        $dbname = 'student_records';
-        $username = 'root';
-        $password = '';
+        <center><h1>Student Records</h1></center>
+        <?php $host = 'localhost'; $dbname = 'student_records'; $username = 'root';
 
         try {
-            $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $stmt = $pdo->query("SELECT * FROM students");
