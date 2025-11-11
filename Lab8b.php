@@ -27,7 +27,7 @@
                     for ($i = 0, $n = count($arr); $i < $n - 1; $i++) {
                         $min = $i;
                         for ($j = $i + 1; $j < $n; $j++) if ($arr[$j][$key] < $arr[$min][$key]) $min = $j;
-                            [$arr[$i], $arr[$min]] = [$arr[$min], $arr[$i]];
+                        [$arr[$i], $arr[$min]] = [$arr[$min], $arr[$i]];
                     }
                 }
                 selectionSort($students, 'gpa');
@@ -50,4 +50,5 @@
     </div>
 </body>
 </html>
+
 
