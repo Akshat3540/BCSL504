@@ -31,15 +31,14 @@
                     }
                 }
                 selectionSort($students, 'gpa');
-
-                echo "<table>";
-                echo "<tr><th>ID</th><th>Name</th><th>GPA</th></tr>";
+                
+                echo "<table><tr><th>ID</th><th>Name</th><th>GPA</th></tr>";
                 foreach ($students as $student) {
-                    echo "<tr>";
-                    echo "<td>" . htmlspecialchars($student['id']) . "</td>";
-                    echo "<td>" . htmlspecialchars($student['name']) . "</td>";
-                    echo "<td>" . htmlspecialchars($student['gpa']) . "</td>";
-                    echo "</tr>";
+                    echo "<tr>
+                    <td>" . htmlspecialchars($student['id']) . "</td>
+                    <td>" . htmlspecialchars($student['name']) . "</td>
+                    <td>" . htmlspecialchars($student['gpa']) . "</td>
+                    </tr>";
                 }
                 echo "</table>";
 
@@ -50,5 +49,3 @@
     </div>
 </body>
 </html>
-
-
