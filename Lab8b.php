@@ -23,7 +23,14 @@
                 $stmt = $pdo->query("SELECT * FROM students");
                 $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                usort($students, fn($i, $j) => $i['gpa'] <=> $j['gpa']);
+                function selectionSort(&$arr, $key) {
+                    for ($i = 0, $n = count($arr); $i < $n - 1; $i++) {
+                        $min = $i;
+                        for ($j = $i + 1; $j < $n; $j++) if ($arr[$j][$key] < $arr[$min][$key]) $min = $j;
+                            [$arr[$i], $arr[$min]] = [$arr[$min], $arr[$i]];
+                    }
+                }
+                selectionSort($students, 'gpa');
 
                 echo "<table>";
                 echo "<tr><th>ID</th><th>Name</th><th>GPA</th></tr>";
@@ -43,3 +50,4 @@
     </div>
 </body>
 </html>
+
