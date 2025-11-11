@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>jQuery Append & Animate Demo</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-  body {font-family: Arial;}
-  .container {max-width:800px; margin:auto; padding:20px; box-shadow:0 0 10px}
-  .box {width:100px; height:100px; background:lightblue; margin:20px 0;}
-  button {padding:10px 10px; border:0; border-radius:5px; color:#fff; background:green;}
-  button:hover {background:#27ae60;}
-</style>
+    <meta charset="UTF-8">
+    <title>jQuery Append & Animate Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        
+        .container {
+            max-width: 800px;
+            min-height: 95vh;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 0 10px #aaa;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            margin: 20px;
+        }
+        
+        button {
+            padding: 10px 10px;
+            border: 0;
+            border-radius: 5px;
+            color: #fff;
+            background: green;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-  <h1>jQuery Demonstration</h1>
+    <div class="container">
+        <h1>jQuery Demonstration</h1>
+        <p id="p1">This is an existing paragraph. </p>
+        <ul id="list">
+            <li>Existing item 1</li>
+            <li>Existing item 2</li>
+        </ul>
+        <div id="box" class="box"></div>
+        <button id="appendBtn">Append Content</button>
+        <button id="animateBtn">Animate Box</button>
+        <button id="colorBtn">Animate & Change Color</button>
+    </div>
+    <script>
+        $(function() {
+            $('#appendBtn').click(() => {
+                $('#p1').append('This content is appended.');
+                $('#list').append('<li>Appended item</li>');
+            });
 
-  <h2>a. Append Content</h2>
-  <p id="p1">This is an existing paragraph. </p>
-  <ul id="list">
-    <li>Existing item 1</li>
-    <li>Existing item 2</li>
-  </ul>
-  <button id="a">Append Content</button>
+            $('#animateBtn').click(() => $('#box').animate({
+                width: 200,
+                height: 200,
+                opacity: 0.5
+            }, 1000));
 
-  <h2>b. Animate Element</h2>
-  <div id="box1" class="box"></div>
-  <button id="b">Animate Box</button>
-
-  <h2>c. Change Color of Animated Div</h2>
-  <div id="box2" class="box"></div>
-  <button id="c">Animate and Change Color</button>
-</div>
-
-<script>
-$(function(){
-  // a. Append content
-  $("#a").click(function(){
-    $("#p1").append("This content is appended.");
-    $("#list").append("<li>Appended item</li>");
-  });
-
-  // b. Animate element
-  $("#b").click(function(){
-    $("#box1").animate({width:"200px",height:"200px",opacity:0.5},1000);
-  });
-
-  // c. Animate and change color
-  $("#c").click(function(){
-    $("#box2").animate({width:"200px",height:"200px"},1000,function(){
-      $(this).css("background","#e74c3c");
-    });
-  });
-});
-</script>
+            $('#colorBtn').click(() => $('#box').animate({
+                width: 200,
+                height: 200
+            }, 1000).css('background', '#e74c3c'));
+        });
+    </script>
 </body>
+
 </html>
