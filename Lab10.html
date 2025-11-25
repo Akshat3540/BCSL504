@@ -6,36 +6,17 @@
     <title>Ajax Demo Program</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-        body {
-            font-family: Arial;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            box-shadow: 0 0 10px;
-        }
-        
-        button {
-            background: green;
-            color: #fff;
-            padding: 10px;
-            border: 0;
-            border-radius: 5px;
-        }
-        
-        pre {
-            border: 1px solid;
-            padding: 10px;
-        }
+        body {font-family: Arial;}
+        .container {max-width: 800px;margin: auto;padding: 20px;box-shadow: 0 0 10px;}
+        button {background: green;color: #fff;padding: 10px;border: 0;border-radius: 5px;}
+        pre {border: 1px solid;padding: 10px;}
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>Ajax Demo Program</h1>
-
+        
         <h2>a. Ajax-like Operation Without jQuery</h2>
         <button onclick="noJQ()">Run</button>
         <pre id="a"></pre>
@@ -62,25 +43,11 @@
                 city: "New York"
             }
         };
-
         const delay = cb => setTimeout(cb, 500);
-
-        function noJQ() {
-            delay(() => a.textContent = data.text);
-        }
-
-        function withJQ() {
-            $.Deferred(d => delay(() => d.resolve(data.text))).done(r => $(b).text(r));
-        }
-
-        function getJSONOp() {
-            $.Deferred(d => delay(() => d.resolve(data.json))).done(r => $(c).text(JSON.stringify(r, null, 2)));
-        }
-
-        function parseOp() {
-            d.textContent = JSON.stringify($.parseJSON(JSON.stringify(data.json)), null, 2);
-        }
+        function noJQ() {delay(() => a.textContent = data.text);}
+        function withJQ() {$.Deferred(d => delay(() => d.resolve(data.text))).done(r => $(b).text(r));}
+        function getJSONOp() {$.Deferred(d => delay(() => d.resolve(data.json))).done(r => $(c).text(JSON.stringify(r, null, 2)));}
+        function parseOp() {d.textContent = JSON.stringify($.parseJSON(JSON.stringify(data.json)), null, 2);}
     </script>
 </body>
-
 </html>
