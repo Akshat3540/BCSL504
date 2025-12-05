@@ -6,10 +6,33 @@
     <title>jQuery Append & Animate Demo</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body { font-family: Arial;}
-        .container { max-width: 800px; min-height: 95vh; padding: 20px; margin: auto; box-shadow: 0 0 10px #aaa; }
-        .box { width: 100px; height: 100px; background: lightblue; margin: 20px; }
-        button { padding: 10px 10px; border: 0; border-radius: 5px; color: #fff; background: green; cursor: pointer; }
+        body {
+            font-family: Arial;
+        }
+
+        .container {
+            max-width: 800px;
+            min-height: 95vh;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 0 10px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 10px;
+            border: 0;
+            border-radius: 5px;
+            color: #fff;
+            background: green;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -27,7 +50,7 @@
         <button id="colorBtn">Animate & Change Color</button>
     </div>
     <script>
-        $(function() {
+        $(function () {
             $('#appendBtn').click(() => {
                 $('#p1').append('This content is appended.');
                 $('#list').append('<li>Appended item</li>');

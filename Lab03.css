@@ -1,88 +1,89 @@
+/* --- GROUP 1: THE BASICS (Tag, Class, ID) --- */
 h2 {
-            color: #2c3e50;
-            font-family: 'Arial', sans-serif;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10 px;
-        }
-        
-        h3:hover {
-            color: #e74c3c;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        hr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-        }
-        
-        p[lang] {
-            font-style: italic;
-        }
-        
-        .highlight {
-            background-color: #f1c40f;
-            padding: 5px;
-        }
-        
-        #main-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ecf0f1;
-        }
-        
-        div p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        div>span {
-            font-weight: bold;
-            color: #16a085;
-        }
-        
-        h2+p {
-            font-size: 1.1em;
-            color: #7f8c8d;
-        }
-        
-        time[datetime] {
-            color: #8e44ad;
-            font-weight: bold;
-        }
-        
-        p::first-letter {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #c0392b;
-        }
-        
-        img,
-        a {
-            border: 1px solid #bdc3c7;
-            padding: 5px;
-        }
-        
-        a:link,
-        a:visited {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        a:hover,
-        a:active {
-            color: #e74c3c;
-            text-decoration: underline;
-        }
-        
-        img[alt] {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        article.special p {
-            text-indent: 20 px;
-            color: #27ae60;
-        }
+    font-family: Arial;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10 px;
+}
+
+.highlight {
+    background-color: #f1c40f;
+    padding: 5px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+/* --- GROUP 2: THE RELATIONS (Descendant, Child, Sibling) --- */
+div p {
+    /* Ancestor Descendant */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+div>span {
+    /* Parent > Child */
+    font-weight: bold;
+    color: #16a085;
+}
+
+h2+p {
+    /* Sibling + Sibling */
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+article.special p {
+    /* Specific Descendant */
+    text-indent: 20 px;
+    color: #27ae60;
+}
+
+/* --- GROUP 3: THE SPECIALS (State, Attribute, Part) --- */
+h3:hover {
+    /* :Pseudo-class (State) */
+    color: #e74c3c;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+a:link,
+a:visited {
+    /* :Pseudo-class (State) */
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    /* :Pseudo-class (State) */
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+p[lang] {
+    /* [Attribute] */
+    font-style: italic;
+}
+
+img[alt] {
+    /* [Attribute] */
+    max-width: 100%;
+    height: auto;
+}
+
+time[datetime] {
+    /* [Attribute] */
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+p::first-letter {
+    /* ::Pseudo-element (Part) */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c0392b;
+}

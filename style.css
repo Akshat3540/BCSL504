@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container,
+#main-content,
+body>table,
+body>form {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button,
+input[type=submit] {
+    background: #28a745;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover,
+input[type=submit]:hover {
+    background: #218838;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    margin: 20px auto;
+}
+
+/* Lab 02 Specific Helper Classes */
+.lab-hours {
+    background: #ffcccb;
+    font-weight: bold;
+}
+
+.elective-hours {
+    background: #90ee90;
+}
+
+.lunch {
+    background: #ffd700;
+}
+
+.odd-row {
+    background: #f8f8f8;
+}
+
+.no-classes {
+    background: #aa447e;
+}

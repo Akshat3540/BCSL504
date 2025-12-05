@@ -4,191 +4,165 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Daily Chronicle</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
+            font-family: arial;
         }
-        
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
+
+        .container {
+            padding: 20px;
+            box-shadow: 0 0 10px;
+        }
+
+        h1 {
+            background-color: black;
+            color: white;
             padding: 20px;
             text-align: center;
-        }
-        
-        header h1 {
             margin: 0;
             font-size: 2.5em;
         }
-        
+
         nav {
-            background-color: #333;
-            color: #fff;
+            background-color: black;
+            color: white;
             padding: 10px;
         }
-        
+
         nav ul {
             list-style-type: none;
-            padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
         }
-        
+
         nav ul li {
             margin: 0 10px;
         }
-        
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
+
         main {
             display: flex;
             margin-top: 20px;
         }
-        
+
         section {
             flex: 2;
             margin-right: 20px;
         }
-        
+
         article {
-            background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         article h2 {
-            color: #1a1a1a;
             font-size: 1.8em;
         }
-        
+
         aside {
             flex: 1;
-            background-color: #e6e6e6;
+            background-color: #f2f2f2;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px;
         }
-        
-        figure {
-            margin: 0;
-            text-align: center;
-        }
-        
+
+
         figure img {
             max-width: 100%;
-            height: auto;
         }
-        
+
         figcaption {
             font-style: italic;
-            color: #666;
-            font-size: 0.9em;
+            text-align: center;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
         }
-        
-        th,
+
         td {
             border: 1px solid #ddd;
             padding: 10px;
-            text-align: left;
         }
-        
-        th {
-            background-color: #f2f2f2;
-        }
-        
+
         footer {
             background-color: #1a1a1a;
             color: #fff;
             text-align: center;
             padding: 10px;
-            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <div class="container">
         <h1>The Daily Chronicle</h1>
-    </header>
-
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Entertainment</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <article>
-                <h2>Breaking News: Major Technological Breakthrough</h2>
-                <p>Scientists have announced a groundbreaking discovery in the field of quantum computing, potentially revolutionizing the tech industry.</p>
-                <figure>
-                    <img src="image2.png" alt="Quantum Computer">
-                    <figcaption>
-                        A state-of-the-art quantum computer at the research facility
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article>
-                <h2>Local Sports Team Wins Championship</h2>
-                <p>In a thrilling match, our local team secured victory in the national championship, bringing pride to our city.</p>
-                <table>
-                    <tr>
-                        <th>Team</th>
-                        <th>Score</th>
-                    </tr>
-                    <tr>
-                        <td>Local Heroes</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Visiting Challengers</td>
-                        <td>2</td>
-                    </tr>
-                </table>
-            </article>
-        </section>
-
-        <aside>
-            <h3>Weather Update</h3>
-            <p>Expect sunny skies with a high of 75°F (24°C) today.</p>
-
-            <h3>Upcoming Events</h3>
+        <nav>
             <ul>
-                <li>City Festival - This Weekend</li>
-                <li>Tech Conference - Next Month</li>
-                <li>Charity Run - In Two Weeks</li>
+                <li>Home</li>
+                <li>Politics</li>
+                <li>Technology</li>
+                <li>Sports</li>
+                <li>Entertainment</li>
             </ul>
-        </aside>
-    </main>
+        </nav>
 
-    <footer>
-        <p>&copy; 2025 The Daily Chronicle. All rights reserved.</p>
-    </footer>
+        <main>
+            <section>
+                <article>
+                    <h2>Breaking News: Major Technological Breakthrough</h2>
+                    <p>Scientists have announced a groundbreaking discovery in the field of quantum computing,
+                        potentially
+                        revolutionizing the tech industry.</p>
+                    <figure>
+                        <img src="image2.png" alt="Quantum Computer">
+                        <figcaption>
+                            A state-of-the-art quantum computer at the research facility
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h2>Local Sports Team Wins Championship</h2>
+                    <p>In a thrilling match, our local team secured victory in the national championship, bringing pride
+                        to
+                        our city.</p>
+                    <table>
+                        <tr>
+                            <th>Team</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr>
+                            <td>Local Heroes</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Visiting Challengers</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+
+            <aside>
+                <h3>Weather Update</h3>
+                <p>Expect sunny skies with a high of 75°F (24°C) today.</p>
+
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>City Festival - This Weekend</li>
+                    <li>Tech Conference - Next Month</li>
+                    <li>Charity Run - In Two Weeks</li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 The Daily Chronicle. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
